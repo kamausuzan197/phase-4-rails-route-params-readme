@@ -1,7 +1,7 @@
 class CheesesController < ApplicationController
 
-  def index
-    cheeses = Cheese.all
+  def show
+    cheeses = Cheese.find(params[:id])
     render json: cheeses
   end
 
